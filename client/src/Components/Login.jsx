@@ -1,10 +1,10 @@
 const Login = () => {
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center mb-10">
+      <div className="flex min-h-full flex-1 flex-col justify-center mb-10 md:mb-16">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h3 className="text-lg font-semibold mb-4">Login</h3>
-          <h4>
+          <h3 className="text-xl font-bold mb-4">Login</h3>
+          <h4 className="font-medium">
             Don't have an account?{" "}
             <a href="mailto:ictsupport@judiciary.go.tz">
               <span className="text-sky-600 underline underline-offset-4">
@@ -27,7 +27,7 @@ const Login = () => {
                   type="email"
                   required
                   autoComplete="email"
-                  className="block w-full rounded-md border-0 p-2 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-gray-400 outline-none sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-2 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-gray-400 outline-none sm:text-sm sm:leading-6 focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
                 />
               </div>
             </div>
@@ -43,7 +43,7 @@ const Login = () => {
                   type="password"
                   required
                   autoComplete="current-password"
-                  className="block w-full rounded-md border-0 p-2 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-gray-400 outline-none sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-2 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-gray-400 outline-none sm:text-sm sm:leading-6 focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
                 />
               </div>
             </div>

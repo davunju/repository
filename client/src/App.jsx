@@ -6,6 +6,9 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import NotFound from "./Components/NotFound";
 import Login from "./Components/Login";
+import AllNews from "./Components/Dashboard/AllNews";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import NewPost from "./Components/Dashboard/Post/NewPost";
 
 const App = () => {
   return (
@@ -16,6 +19,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="login" element={<Login />} />
+          <Route path="news" element={<AllNews />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/post" element={<NewPost />} />
         </Routes>
         <Footer />
       </div>

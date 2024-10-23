@@ -10,7 +10,7 @@ const Home = () => {
         <h1 className="mb-5 md:text-3xl text-2xl font-semibold md:text-center">
           Commercial Division
         </h1>
-        <div className="mb-16 md:text-2xl textl-lg md:text-center relative">
+        <div className="mb-16 md:text-2xl textl-lg relative">
           <p className="mb-4">
             The Commercial Court was officially inaugurated on 15th September,
             1999. The Government of Tanzania endorsed the recommendations in
@@ -18,14 +18,21 @@ const Home = () => {
             with other High Court Registries is that this court specializes in
             the determination of commercial disputes only.
           </p>
-          <div className="flex items-center gap-2 underline md:ml-4 underline-offset-4 hover:cursor-pointer text-sky-600 mb-16">
+          <div className="flex items-center gap-2 underline underline-offset-4 hover:cursor-pointer text-sky-600 mb-16">
             <p>Find out more</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              className="w-8 h-5 fill-sky-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="size-6"
             >
-              <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              />
             </svg>
           </div>
           <div className="hidden md:grid grid-cols-3 gap-8 place-items-center">
@@ -47,45 +54,6 @@ const Home = () => {
         </div>
       </div>
     </div>
-    /*
-    <div className="news">
-      <div className="new">
-        <img src={news1} alt="" />
-        <div className="caption">
-          <img src={home_icon} alt="" />
-          <p>Click for more</p>
-        </div>
-      </div>
-      <div className="new">
-        <img src={news2} alt="" />
-        <div className="caption">
-          <img src={home_icon} alt="" />
-          <p>Click for more</p>
-        </div>
-      </div>
-      <div className="new">
-        <img src={news3} alt="" />
-        <div className="caption">
-          <img src={home_icon} alt="" />
-          <p>Click for more</p>
-        </div>
-      </div>
-      <div className="new">
-        <img src={news3} alt="" />
-        <div className="caption">
-          <img src={home_icon} alt="" />
-          <p>Click for more</p>
-        </div>
-      </div>
-      <div className="new">
-        <img src={news3} alt="" />
-        <div className="caption">
-          <img src={home_icon} alt="" />
-          <p>Click for more</p>
-        </div>
-      </div>
-    </div>
-    */
   );
 };
 

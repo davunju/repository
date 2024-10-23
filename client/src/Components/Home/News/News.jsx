@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { newsContent } from "./data";
 
 const News = () => {
@@ -49,9 +50,11 @@ const News = () => {
         </div>
       </div>
       <div className="w-full mx-auto md:w-[980px]">
-        <button className="text-lg text-sky-50 p-3 bg-slate-700 hover:bg-red-700">
-          See more news
-        </button>
+        <Link to="news">
+          <button className="text-lg text-sky-50 p-3 bg-slate-700 hover:bg-red-700">
+            See more news
+          </button>
+        </Link>
       </div>
     </div>
   );

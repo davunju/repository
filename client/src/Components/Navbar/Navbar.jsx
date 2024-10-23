@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <header className="mb-10 md:mb-16">
-      <div className="md:bg-slate-100 bg-gradient-to-r from-red-300 to-red-50 shadow-lg">
+      <div className="md:bg-slate-100 bg-gradient-to-r from-red-300 via-red-50 to-red-300 shadow-lg">
         <nav className="px-2">
           <div className="flex items-center md:justify-center p-2 md:w-[980px] mx-auto">
             <div className="flex items-center gap-1 md:gap-2">
@@ -39,15 +39,24 @@ const Navbar = () => {
               Home
             </li>
           </Link>
-          <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-            About Us
-          </li>
-          <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-            Causelist
-          </li>
-          <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-            Publications
-          </li>
+          <Link to="post">
+            <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+              About Us
+            </li>
+          </Link>
+
+          <Link to="dashboard">
+            <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+              Causelist
+            </li>
+          </Link>
+
+          <Link to="news">
+            <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+              News
+            </li>
+          </Link>
+
           <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
             Legislation
           </li>
