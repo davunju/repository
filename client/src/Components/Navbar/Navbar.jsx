@@ -40,9 +40,11 @@ const Navbar = () => {
             </li>
           </Link>
 
-          <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-            About Us
-          </li>
+          <Link to="about">
+            <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+              About Us
+            </li>
+          </Link>
 
           <Link to="dashboard">
             <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">

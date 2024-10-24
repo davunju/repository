@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import { pictures } from "./data";
 
@@ -18,23 +19,26 @@ const Home = () => {
             with other High Court Registries is that this court specializes in
             the determination of commercial disputes only.
           </p>
-          <div className="flex items-center gap-2 underline underline-offset-4 hover:cursor-pointer text-sky-600 mb-16">
-            <p>Find out more</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-              />
-            </svg>
-          </div>
+          <Link to="about">
+            <div className="flex items-center gap-2 underline underline-offset-4 hover:cursor-pointer text-sky-600 mb-16">
+              <p>Find out more</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </div>
+          </Link>
+
           <div className="hidden md:grid grid-cols-3 gap-8 place-items-center">
             {pictures.map((picture) => (
               <div
