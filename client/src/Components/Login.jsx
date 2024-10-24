@@ -53,7 +53,7 @@ const Login = () => {
                 type="submit"
                 className="flex w-1/2 justify-center rounded-md bg-sky-500 p-2 font-semibold leading-6 text-white shadow-sm hover:bg-orange-400"
               >
-                Sign in
+                Log in
               </button>
             </div>
 

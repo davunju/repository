@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const NewPost = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +16,21 @@ const NewPost = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const modules = {
+    toolbar: [
+      [{ font: [] }],
+      [{ size: [] }],
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [
+        { list: "ordered" },
+        { list: "bullet" },
+        { indent: "-1" },
+        { indent: "+1" },
+      ],
+      ["link"],
+    ],
   };
 
   const onSubmitForm = async (e) => {
@@ -44,6 +61,7 @@ const NewPost = () => {
             type="text"
             name="fullname"
             id="name"
+            required
             value={formData.fullname}
             onChange={handleChange}
             className="block ring-1 ring-inset w-7/12 ring-slate-300 p-2 rounded-md shadow-sm outline-none focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
@@ -52,12 +70,13 @@ const NewPost = () => {
 
         <div>
           <label htmlFor="heading" className="block leading-6 mb-2 font-medium">
-            Heading
+            Title
           </label>
           <input
             type="text"
             name="heading"
             id="heading"
+            required
             value={formData.heading}
             onChange={handleChange}
             className="block ring-1 ring-inset w-9/12 ring-slate-300 rounded-md p-2 shadow-sm outline-none focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
@@ -66,16 +85,15 @@ const NewPost = () => {
 
         <div>
           <label htmlFor="story" className="block leading-6 mb-2 font-medium">
-            Paragraph
+            Content
           </label>
-          <textarea
-            name="story"
-            id="story"
-            rows="5"
+          <ReactQuill
+            theme="snow"
+            modules={modules}
             value={formData.story}
             onChange={handleChange}
-            className="block ring-1 ring-inset w-full ring-slate-300 rounded-md border-0 outline-none py-1.5 shadow-sm placeholder:slate-300 px-2 focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
-          ></textarea>
+            className="w-full border-0 outline-none"
+          />
         </div>
 
         <div>
@@ -86,6 +104,7 @@ const NewPost = () => {
             type="date"
             name="date"
             id="date"
+            required
             value={formData.date}
             onChange={handleChange}
             className="block ring-1 ring-inset w-56 ring-slate-300 rounded-md p-2 outline-none focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
