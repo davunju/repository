@@ -10,6 +10,7 @@ import AllNews from "./Components/Dashboard/AllNews";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import NewPost from "./Components/Dashboard/Post/NewPost";
 import AboutUs from "./Components/Pages/AboutUs";
+import NewsArticle from "./Components/Pages/NewsArticle";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="/post" element={<NewPost />} />
           <Route path="about" element={<AboutUs />} />
+          <Route path="/news/:slug" element={<NewsArticle />} />
         </Routes>
         <Footer />
       </div>
