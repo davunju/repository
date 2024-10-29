@@ -49,12 +49,12 @@ const NewsArticle = () => {
                 {article.title}
               </h1>
 
-              <div className="my-3">
+              <div className="my-4">
                 {article.image_path && (
                   <img src={`http://localhost:5000/${article.image_path}`} />
                 )}
               </div>
-              <div className="flex gap-1 items-center text-lg font-medium mb-3">
+              <div className="flex gap-1 items-center text-lg font-medium mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"

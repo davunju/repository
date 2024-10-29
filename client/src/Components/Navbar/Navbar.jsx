@@ -1,12 +1,18 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "/assets/logo_bl.png";
 import emblem from "/assets/emblem.png";
 import Login from "../Login";
 
-const Navbar = () => {
+const Navbar = ({ isLoggedIn, onLogout }) => {
   const [menu, setMenu] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogoutClick = () => {
+    onLogout();
+    navigate("/login");
+  };
 
   return (
     <header className="mb-10 md:mb-16">
@@ -46,11 +52,9 @@ const Navbar = () => {
             </li>
           </Link>
 
-          <Link to="dashboard">
-            <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-              Causelist
-            </li>
-          </Link>
+          <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+            Causelist
+          </li>
 
           <Link to="news">
             <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
@@ -68,6 +72,27 @@ const Navbar = () => {
             action=""
             className="relative hidden md:flex items-center gap-3"
           >
+            {isLoggedIn ? (
+              <>
+                <Link to="/dashboard">
+                  <button className="p-2 text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+                    Dashboard
+                  </button>
+                </Link>
+                <button
+                  onClick={handleLogoutClick}
+                  className="p-2 text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <Link to="login">
+                <button className="p-2 text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+                  Login
+                </button>
+              </Link>
+            )}
             <div className="relative">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,11 +109,6 @@ const Navbar = () => {
                 className="p-2 w-full outline-none"
               />
             </div>
-            <Link to="login">
-              <button className=" p-3 text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-                Login
-              </button>
-            </Link>
           </form>
         </ul>
       </div>

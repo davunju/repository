@@ -1,4 +1,46 @@
-const Login = () => {
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const Login = ({ onLogin }) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    const token = localStorage.getItem("token");
+    onLogin(token);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const token = localStorage.getItem("token");
+
+      const result = await fetch("http://localhost:5000/protected", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        localStorage.setItem("token", data.token);
+        setMessage("Login successful");
+        navigate("/dashboard");
+      } else {
+        setMessage(data.message);
+      }
+    } catch (err) {
+      setMessage("Error Logging in");
+    }
+  };
+
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center mb-10 md:mb-16">
@@ -15,7 +57,7 @@ const Login = () => {
         </div>
 
         <div className="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="#" method="POST" className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="email" className="block leading-6">
                 Username
@@ -25,6 +67,8 @@ const Login = () => {
                   id="email"
                   name="email"
                   type="email"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                   required
                   autoComplete="email"
                   className="block w-full rounded-md border-0 p-2 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-gray-400 outline-none sm:text-sm sm:leading-6 focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
@@ -41,6 +85,8 @@ const Login = () => {
                   id="password"
                   name="password"
                   type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                   autoComplete="current-password"
                   className="block w-full rounded-md border-0 p-2 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-gray-400 outline-none sm:text-sm sm:leading-6 focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
@@ -48,8 +94,11 @@ const Login = () => {
               </div>
             </div>
 
+            <p className="my-4 text-red-500 italic font-normal">{message}</p>
+
             <div>
               <button
+                onClick={handleLoginClick}
                 type="submit"
                 className="flex w-1/2 justify-center rounded-md bg-sky-500 p-2 font-semibold leading-6 text-white shadow-sm hover:bg-orange-400"
               >
