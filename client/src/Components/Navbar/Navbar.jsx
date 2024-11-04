@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "/assets/logo_bl.png";
 import emblem from "/assets/emblem.png";
-import Login from "../Login";
 
 const Navbar = ({ isLoggedIn, onLogout }) => {
   const [menu, setMenu] = useState(false);
@@ -52,22 +51,24 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
             </li>
           </Link>
 
-          <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-            Causelist
-          </li>
+          <Link to="/fees&rules">
+            <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+              Court Fees & Rules
+            </li>
+          </Link>
 
-          <Link to="news">
+          <Link to="/news">
             <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
               News
             </li>
           </Link>
 
-          <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-            Legislation
-          </li>
-          <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
-            Judgments & Ruling
-          </li>
+          <a href="https://tanzlii.org/judgments/TZHCComD/" target="_blank">
+            <li className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4">
+              Judgments & Ruling
+            </li>
+          </a>
+
           <form
             action=""
             className="relative hidden md:flex items-center gap-3"

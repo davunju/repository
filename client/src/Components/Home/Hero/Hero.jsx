@@ -6,9 +6,9 @@ import { pictures } from "./data";
 
 const Home = () => {
   return (
-    <div className="w-full mb-16 md:mb-24">
+    <div className="w-full mb-16 md:mb-24 text-slate-700 relative">
       <div className="md:w-[980px] mx-auto w-full px-5">
-        <h1 className="mb-5 md:text-3xl text-2xl font-semibold md:text-center">
+        <h1 className="mb-5 md:text-4xl text-2xl font-bold md:text-center text-transparent bg-gradient-to-r from-red-500 to-slate-700 bg-clip-text">
           Commercial Division
         </h1>
         <div className="mb-16 md:text-2xl textl-lg relative">
@@ -20,23 +20,9 @@ const Home = () => {
             the determination of commercial disputes only.
           </p>
           <Link to="about">
-            <div className="flex items-center gap-2 underline underline-offset-4 hover:cursor-pointer text-sky-600 mb-16">
-              <p>Find out more</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </div>
+            <p className="hover:cursor-pointer text-lg text-sky-600 mb-16">
+              Find out more <span aria-hidden="true">&rarr;</span>
+            </p>
           </Link>
 
           <div className="hidden md:grid grid-cols-3 gap-8 place-items-center">
@@ -57,6 +43,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="shadow"></div>
     </div>
   );
 };

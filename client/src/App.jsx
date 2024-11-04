@@ -5,13 +5,14 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import NotFound from "./Components/NotFound";
-import Login from "./Components/Login";
-import AllNews from "./Components/Dashboard/AllNews";
+import Login from "./Components/Pages/Login";
+import AllNews from "./Components/Pages/AllNews";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import NewPost from "./Components/Dashboard/Post/NewPost";
 import AboutUs from "./Components/Pages/AboutUs";
 import NewsArticle from "./Components/Pages/NewsArticle";
 import ProtectedRoute from "./Components/protectedRoute";
+import Fees from "./Components/Pages/Fees/Fees";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -47,11 +48,12 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="news" element={<AllNews />} />
+          <Route path="/news" element={<AllNews />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="/post" element={<NewPost />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="/news/:slug" element={<NewsArticle />} />
+          <Route path="/fees&rules" element={<Fees />} />
         </Routes>
         <Footer />
       </div>

@@ -74,7 +74,7 @@ const News = () => {
         </div>
       </div>
       <div className="w-full mx-auto md:w-[980px]">
-        <Link to="news">
+        <Link to="/news">
           <button className="text-lg text-sky-50 p-3 bg-slate-700 hover:bg-red-700">
             See more news
           </button>

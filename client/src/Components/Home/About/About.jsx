@@ -30,11 +30,11 @@ function About() {
         <h2 className="text-2xl font-bold mb-5 text-center">
           Judiciary of Tanzania
         </h2>
-        <div className="flex md:flex-row flex-col gap-3 w-full">
+        <div className="flex md:flex-row flex-col gap-5 w-full">
           {contents.map((content) => (
             <div
               key={content.id}
-              className="w-full text-center p-5 border border-slate-300 bg-paper flex flex-col justify-center items-center"
+              className="w-full text-center p-5 border border-slate-300 bg-paper flex flex-col justify-center items-center rounded-md shadow-md hover:bg-slate-300 hover:transition duration-500 hover:scale-100 ease-in-out"
             >
               <img
                 src={content.icon}

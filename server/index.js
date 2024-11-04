@@ -27,9 +27,6 @@ app.post("/login", async (req, res) => {
     );
     const user = response.rows[0];
 
-    console.log(user.password);
-    console.log(password);
-
     if (user && (await bcrypt.compare(password, user.password))) {
       const token = jwt.sign(
         { id: user.id, username: user.username },
@@ -118,7 +115,7 @@ app.get("/stories", async (req, res) => {
 app.get("/stories/latestnews", async (req, res) => {
   try {
     const latestNews = await pool.query(
-      "SELECT * FROM news ORDER BY date DESC LIMIT 6"
+      "SELECT * FROM news ORDER BY date DESC LIMIT 3"
     );
     res.json(latestNews.rows);
   } catch (err) {

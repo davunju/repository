@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <main className="grid min-h-full place-items-center mb-10 md:mb-16">
+    <main className="grid min-h-full place-items-center mb-10 md:mb-16 text-slate-700">
       <div className="text-center">
         <p className="text-2xl font-semibold text-sky-500">404</p>
         <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
@@ -21,7 +21,7 @@ const NotFound = () => {
             </a>
           </Link>
 
-          <a href="#" className="font-semibold">
+          <a href="mailto:ictsupport@judiciary.go.tz" className="font-semibold">
             Contact support <span aria-hidden="true">&rarr;</span>
           </a>
         </div>

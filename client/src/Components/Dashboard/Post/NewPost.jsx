@@ -171,7 +171,7 @@ const NewPost = () => {
                   for="file-upload"
                   className="relative cursor-pointer rounded-md bg-white font-semibold text-sky-500 focus-within:outline-none hover:underline underline-offset-4"
                 >
-                  <span>Upload a file</span>
+                  <span>{image ? `${image.name}` : "Upload a file"}</span>
                   <input
                     id="file-upload"
                     name="file-upload"

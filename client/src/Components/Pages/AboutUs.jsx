@@ -61,7 +61,7 @@ const AboutUs = () => {
       </div>
       <div className="mb-5 relative text-lg">
         <h2 className="text-3xl font-semibold leading-6 mb-5">
-          Our <span className="font-bold text-red-500">Leadership</span>
+          Meet Our <span className="font-bold text-red-500">Leadership</span>
         </h2>
         <p className="w-full lg:w-[70%] mb-8">
           They're leaders who are passionate about{" "}
@@ -80,8 +80,8 @@ const AboutUs = () => {
                 className="mb-3 rounded-lg w-full h-64"
               />
               <div>
-                <h1 className="font-medium">{picture.name}</h1>
-                <h2>{picture.position}</h2>
+                <h1 className="font-semibold">{picture.name}</h1>
+                <h2 className="text-red-500 font-medium">{picture.position}</h2>
               </div>
             </div>
           ))}
