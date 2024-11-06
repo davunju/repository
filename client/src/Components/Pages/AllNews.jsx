@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const AllNews = () => {
   const [updates, setUpdates] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 2;
 
   const getUpdates = async () => {
     try {
@@ -19,15 +21,26 @@ const AllNews = () => {
     getUpdates();
   }, []);
 
+  const totalPages = Math.ceil(updates.length / itemsPerPage);
+
+  const currentUpdates = updates.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <main className="w-full max-w-7xl mx-auto text-slate-700 mb-10 md:mb-16 p-5">
       <h1 className="text-xl md:text-3xl font-bold md:text-center mb-5">
         News and Updates
       </h1>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
-        {updates.map((update) => (
+        {currentUpdates.map((update, index) => (
           <div
-            key={update.id}
+            key={index}
             className="ring-1 ring-slate-200 shadow-md ring-inset p-4 bg-slate-100 rounded-md hover:bg-gradient-to-r from-red-100 via-red-50 to-red-200"
           >
             <div className="flex gap-1 items-center mb-3">
@@ -49,6 +62,21 @@ const AllNews = () => {
           </div>
         ))}
       </div>
+      <section className="my-10 text-center bg-inline-flex gap-3 justify-center isolate -space-x-px rounded-md shadow-sm">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => handlePageChange(index + 1)}
+            className={
+              currentPage === index + 1
+                ? "bg-sky-500 relative inline-flex items-center px-4 py-2 text-sm font-semibold text-red-50 ring-1 ring-inset ring-gray-300 focus:z-20 focus:outline-offset-0"
+                : "relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+            }
+          >
+            {index + 1}
+          </button>
+        ))}
+      </section>
     </main>
   );
 };

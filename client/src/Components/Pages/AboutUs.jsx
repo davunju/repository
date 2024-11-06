@@ -155,7 +155,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="text-lg flex items-start w-full justify-start gap-5">
+      <div className="text-base flex lg:flex-row flex-col items-start w-full justify-start gap-5">
         <div className="w-full">
           <h1 className="text-xl mb-3 font-medium text-red-500">Vision</h1>
           <p className="bg-slate-200 mb-2 px-2 py-1">

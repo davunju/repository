@@ -4,7 +4,7 @@ import { documents } from "./data";
 
 const Fees = () => {
   return (
-    <main className="overflow-x-auto mb-10 md:mb-16 text-slate-700 w-full max-w-7xl mx-auto">
+    <main className="overflow-x-auto mb-10 md:mb-16 text-slate-700 w-full max-w-7xl p-10 mx-auto">
       <h1 className="text-2xl font-bold mb-3">Commercial Court Fees</h1>{" "}
       <article className="mb-5">
         Welcome to the comprehensive guide to Commercial Court fees, where
