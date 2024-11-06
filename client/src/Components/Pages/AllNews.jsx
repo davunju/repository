@@ -20,7 +20,7 @@ const AllNews = () => {
   }, []);
 
   return (
-    <main className="w-full md:w-[980px] mx-auto text-slate-700 mb-10 md:mb-16 p-3">
+    <main className="w-full max-w-7xl mx-auto text-slate-700 mb-10 md:mb-16 p-5">
       <h1 className="text-xl md:text-3xl font-bold md:text-center mb-5">
         News and Updates
       </h1>

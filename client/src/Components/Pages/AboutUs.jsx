@@ -2,7 +2,7 @@ import { pictures } from "../Home/Hero/data";
 
 const AboutUs = () => {
   return (
-    <main className="text-slate-700 w-full lg:w-[980px] mx-auto p-3 mb-10 md:mb-16 relative">
+    <main className="text-slate-700 w-full max-w-7xl mx-auto p-10 mb-10 md:mb-16 relative">
       <div class="absolute inset-0 -z-10 overflow-hidden">
         <svg
           class="absolute left-[max(50%,25rem)] top-0 bottom-0 h-full w-[128rem] -translate-x-1/2 stroke-slate-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -46,7 +46,7 @@ const AboutUs = () => {
         </h2>
       </div>
       <div className="flex items-start justify-between gap-10 mb-8 md:mb-10">
-        <p className="leading-6 text-lg">
+        <p className="lg:leading-7 leading-6 text-lg">
           The Commercial Court was officially inaugurated on 15th September,
           1999. The Government of Tanzania endorsed the recommendations in 1997.
           It is a division of the High Court of Tanzania. The difference with
@@ -77,7 +77,7 @@ const AboutUs = () => {
               <img
                 src={picture.url}
                 alt=""
-                className="mb-3 rounded-lg w-full h-64"
+                className="mb-3 rounded-lg w-80 h-64"
               />
               <div>
                 <h1 className="font-semibold">{picture.name}</h1>
@@ -158,26 +158,36 @@ const AboutUs = () => {
       <div className="text-lg flex items-start w-full justify-start gap-5">
         <div className="w-full">
           <h1 className="text-xl mb-3 font-medium text-red-500">Vision</h1>
-          <p>
+          <p className="bg-slate-200 mb-2 px-2 py-1">
             To carry out the administration of Justice to the general public in
             dealing with disposal of cases effectively and efficiently
           </p>
         </div>
         <div className="w-full">
           <h1 className="text-xl mb-3 font-medium text-red-500">Mission</h1>
-          <p>Timely and Accessible Justice for All</p>
+          <p className="bg-slate-200 mb-2 px-2 py-1">
+            Timely and Accessible Justice for All
+          </p>
         </div>
         <div className="w-full">
           <h1 className="text-xl mb-3 font-medium text-red-500">Core Values</h1>
-          <ul>
-            <li>Equality (before the law)</li>
-            <li>Impartiality</li>
-            <li>Independence of decision-making</li>
-            <li>Competence and professionalism</li>
-            <li>Integrity</li>
-            <li>Accessibility</li>
-            <li>Timeliness</li>
-            <li>Certainty and predictability of decisions</li>
+          <ul className="">
+            <li className="bg-slate-200 mb-2 px-2 py-1">
+              Equality (before the law)
+            </li>
+            <li className="bg-slate-200 mb-2 px-2 py-1">Impartiality</li>
+            <li className="bg-slate-200 mb-2 px-2 py-1">
+              Independence of decision-making
+            </li>
+            <li className="bg-slate-200 mb-2 px-2 py-1">
+              Competence and professionalism
+            </li>
+            <li className="bg-slate-200 mb-2 px-2 py-1">Integrity</li>
+            <li className="bg-slate-200 mb-2 px-2 py-1">Accessibility</li>
+            <li className="bg-slate-200 mb-2 px-2 py-1">Timeliness</li>
+            <li className="bg-slate-200 mb-2 px-2 py-1">
+              Certainty and predictability of decisions
+            </li>
           </ul>
         </div>
       </div>

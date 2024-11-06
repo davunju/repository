@@ -3,8 +3,8 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-red-950 bg-blend-multiply bg-paper bg-cover bg-center text-slate-50">
-      <div className="max-w-[980px] w-full mx-auto ">
-        <div className="md:flex flex-col md:flex-row gap-5 md:justify-between md:py-14 p-5 text-center md:text-start">
+      <div className="max-w-7xl w-full mx-auto ">
+        <div className="md:flex flex-col md:flex-row gap-5 lg:gap-10 md:py-14 p-5 text-center md:text-start">
           <div className="mb-5">
             <h1 className="text-xl underline underline-offset-4 mb-3 font-semibold">
               Contact Us
@@ -143,17 +143,17 @@ const Footer = () => {
                   </svg>
                 </a>
               </div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7923.230382543851!2d39.29075958853835!3d-6.816569661564156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b19c229457f%3A0x644cc50a095c165c!2sHigh%20Court%20of%20Tanzania%20Commercial%20Division!5e0!3m2!1sen!2stz!4v1728543481874!5m2!1sen!2stz"
-                width="300"
-                height="200"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                className="rounded-md w-full"
-              ></iframe>
             </div>
           </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7923.230382543851!2d39.29075958853835!3d-6.816569661564156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b19c229457f%3A0x644cc50a095c165c!2sHigh%20Court%20of%20Tanzania%20Commercial%20Division!5e0!3m2!1sen!2stz!4v1728543481874!5m2!1sen!2stz"
+            width="300"
+            height="200"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            className="rounded-md w-80 mx-auto"
+          ></iframe>
         </div>
       </div>
       <div className="flex items-center justify-center gap-1 p-4 text-sm md:text-base border-t border-slate-50 bg-red-950">

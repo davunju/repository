@@ -13,6 +13,7 @@ export default {
         grunge: "url('/assets/grunge.jpg')",
         paper: "url('/assets/paper_texture.jpg')",
         whiteStriped: "url('/assets/white-striped-paper.jpg')",
+        home: "url('/assets/mzani.jpg')",
       },
       fontFamily: {
         raleway: '"Inter", sans-serif',

@@ -25,16 +25,16 @@ function About() {
     },
   ];
   return (
-    <div className="max-w-[980px] w-full mx-auto mb-16 md:mb-24 p-5">
+    <div className="max-w-7xl w-full mx-auto mb-16 md:mb-24 p-10">
       <div className="about-right">
-        <h2 className="text-2xl font-bold mb-5 text-center">
+        <h2 className="text-2xl font-bold mb-8 text-center">
           Judiciary of Tanzania
         </h2>
-        <div className="flex md:flex-row flex-col gap-5 w-full">
+        <div className="flex md:flex-row flex-col gap-7 w-full">
           {contents.map((content) => (
             <div
               key={content.id}
-              className="w-full text-center p-5 border border-slate-300 bg-paper flex flex-col justify-center items-center rounded-md shadow-md hover:bg-slate-300 hover:transition duration-500 hover:scale-100 ease-in-out"
+              className="w-full text-center p-5 border border-slate-300 bg-paper bg-slate-100 bg-blend-multiply flex flex-col justify-center items-center rounded-md shadow-md"
             >
               <img
                 src={content.icon}

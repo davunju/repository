@@ -19,24 +19,26 @@ const News = () => {
   }, []);
 
   return (
-    <div className="text-slate-700 w-full p-8">
-      <div className="mb-5 md:w-[980px] w-full mx-auto">
-        <h1 className="text-2xl font-semibold mb-5">Latest News</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {news.map((article) => (
-            <div
-              key={article.id}
-              className="flex flex-col gap-4 cursor-pointer"
-            >
-              <div className="">
-                <div className="mb-2">
-                  {article.image_path && (
-                    <img
-                      src={`http://localhost:5000/${article.image_path}`}
-                      className="h-auto w-full rounded-lg"
-                    />
-                  )}
-                </div>
+    <div className="max-w-7xl w-full mx-auto text-slate-700 p-10 my-12 space-y-10">
+      <h1 className="text-2xl font-semibold mb-5">
+        Latest <span className="font-bold text-red-500">News</span>
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {news.map((article) => (
+          <div
+            key={article.id}
+            className="flex flex-col gap-4 cursor-pointer bg-slate-200 rounded-lg shadow-md"
+          >
+            <div className="">
+              <div className="mb-2">
+                {article.image_path && (
+                  <img
+                    src={`http://localhost:5000/${article.image_path}`}
+                    className="h-auto w-full rounded-lg"
+                  />
+                )}
+              </div>
+              <div className="px-4">
                 <div className="text-sm text-slate-500 flex gap-5 mb-2">
                   <div className="flex gap-1 items-center">
                     <svg
@@ -70,12 +72,13 @@ const News = () => {
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-      <div className="w-full mx-auto md:w-[980px]">
+
+      <div className="w-full max-w-7xl mx-auto">
         <Link to="/news">
-          <button className="text-lg text-sky-50 p-3 bg-slate-700 hover:bg-red-700">
+          <button className="text-lg text-sky-50 p-3 bg-slate-700 hover:bg-red-700 rounded-lg">
             See more news
           </button>
         </Link>
