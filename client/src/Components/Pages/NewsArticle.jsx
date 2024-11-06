@@ -29,7 +29,7 @@ const NewsArticle = () => {
   }
 
   return (
-    <main className="text-slate-700 w-full lg:w-[980px] mx-auto mb-10 md:mb-16">
+    <main className="text-slate-700 w-full max-w-6xl mx-auto mb-10 md:mb-16">
       <div className="w-full md:w-10/12 mx-auto">
         <div>
           {" "}
@@ -49,11 +49,6 @@ const NewsArticle = () => {
                 {article.title}
               </h1>
 
-              <div className="my-4">
-                {article.image_path && (
-                  <img src={`http://localhost:5000/${article.image_path}`} />
-                )}
-              </div>
               <div className="flex gap-1 items-center text-lg font-medium mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +58,12 @@ const NewsArticle = () => {
                   <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
                 </svg>
                 <p className="text-sm">{article.fullname}</p>
+              </div>
+
+              <div className="my-4">
+                {article.image_path && (
+                  <img src={`http://localhost:5000/${article.image_path}`} />
+                )}
               </div>
 
               <div

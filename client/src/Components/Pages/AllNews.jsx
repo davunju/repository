@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AllNews = () => {
   const [updates, setUpdates] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 2;
+  const itemsPerPage = 6;
 
   const getUpdates = async () => {
     try {
