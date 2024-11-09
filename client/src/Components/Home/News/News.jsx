@@ -38,7 +38,7 @@ const News = () => {
                   />
                 )}
               </div>
-              <div className="px-4">
+              <div className="px-4 space-y-2">
                 <div className="text-sm text-slate-500 flex gap-5 mb-2">
                   <div className="flex gap-1 items-center">
                     <svg
@@ -64,9 +64,11 @@ const News = () => {
                 <h1 className="mb-2 md:text-base lg:text-lg font-semibold">
                   {article.title}
                 </h1>
-                <div className="lg:text-base mb-2 mr-3">{article.subtitle}</div>
+                <div className="lg:text-base mb-2 mr-3">
+                  {article.subtitle.split(" ").slice(0, 30).join(" ") + " ..."}
+                </div>
                 <Link to={`/news/${article.slug}`}>
-                  <p className="text-sky-500 mb-3 font-semibold hover:underline hover:underline-offset-4">
+                  <p className="text-sky-500 my-4 font-semibold hover:underline hover:underline-offset-4">
                     Read More
                   </p>
                 </Link>
