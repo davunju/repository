@@ -11,7 +11,7 @@ const Judgment = () => {
         {contents.map((content) => (
           <div
             key={content.id}
-            className="bg-slate-200 p-5 rounded-xl shadow-md cursor-pointer"
+            className="bg-gray-200 ring-1 ring-inset ring-gray-300 p-5 rounded-xl shadow-md cursor-pointer"
           >
             <div className="mb-2 flex items-center gap-2">
               <svg
@@ -42,9 +42,15 @@ const Judgment = () => {
       </div>
 
       <div className="w-full max-w-7xl mx-auto">
-        <button className="text-lg text-sky-50 p-3 bg-slate-700 hover:bg-red-700 rounded-lg">
-          See more judgments
-        </button>
+        <a
+          href="http://tanzlii.org/judgments/TZHCComD/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="text-lg text-sky-50 p-3 bg-slate-700 hover:bg-red-700 rounded-lg">
+            See more judgments
+          </button>
+        </a>
       </div>
     </div>
   );

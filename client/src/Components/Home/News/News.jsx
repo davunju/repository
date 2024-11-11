@@ -19,7 +19,7 @@ const News = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl w-full mx-auto text-slate-700 p-10 my-12 space-y-10">
+    <div className="max-w-7xl w-full mx-auto text-slate-900 p-10 my-12 space-y-10">
       <h1 className="text-2xl font-semibold mb-5">
         Latest <span className="font-bold text-red-500">News</span>
       </h1>
@@ -27,7 +27,7 @@ const News = () => {
         {news.map((article) => (
           <div
             key={article.id}
-            className="flex flex-col gap-4 cursor-pointer bg-slate-200 rounded-lg shadow-md"
+            className="flex flex-col gap-4 cursor-pointer bg-gray-200 ring-1 ring-inset ring-gray-300 rounded-lg shadow-md"
           >
             <div className="">
               <div className="mb-2">
@@ -39,7 +39,7 @@ const News = () => {
                 )}
               </div>
               <div className="px-4 space-y-2">
-                <div className="text-sm text-slate-500 flex gap-5 mb-2">
+                <div className="text-sm text-slate-900 flex gap-5 mb-2">
                   <div className="flex gap-1 items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
