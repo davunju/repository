@@ -11,7 +11,7 @@ const Judgment = () => {
         {contents.map((content) => (
           <div
             key={content.id}
-            className="bg-gray-200 ring-1 ring-inset ring-gray-300 p-5 rounded-xl shadow-md cursor-pointer"
+            className="bg-gray-200 ring-1 ring-inset ring-gray-400 p-5 rounded-xl shadow-md cursor-pointer"
           >
             <div className="mb-2 flex items-center gap-2">
               <svg

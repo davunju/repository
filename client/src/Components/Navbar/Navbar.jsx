@@ -107,7 +107,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
                 name="search"
                 id="search"
                 placeholder="Search"
-                className="p-2 w-full outline-none"
+                className="p-2 w-full outline-none rounded-md"
               />
             </div>
           </form>

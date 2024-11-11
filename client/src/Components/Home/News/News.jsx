@@ -27,7 +27,7 @@ const News = () => {
         {news.map((article) => (
           <div
             key={article.id}
-            className="flex flex-col gap-4 cursor-pointer bg-gray-200 ring-1 ring-inset ring-gray-300 rounded-lg shadow-md"
+            className="flex flex-col gap-4 cursor-pointer bg-gray-200 ring-1 ring-inset ring-gray-400 rounded-lg shadow-md"
           >
             <div className="">
               <div className="mb-2">

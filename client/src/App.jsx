@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
@@ -32,9 +33,18 @@ const App = () => {
     setIsLoggedIn(false);
   };
 
+  const ScrollToTop = () => {
+    const pathName = useLocation();
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathName]);
+    return null;
+  };
+
   return (
     <BrowserRouter>
       <div className="bg-hero bg-center bg-cover bg-fixed">
+        <ScrollToTop />
         <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
         <Routes>
           <Route path="/" element={<Home />} />
