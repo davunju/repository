@@ -41,7 +41,7 @@ const AllNews = () => {
         {currentUpdates.map((update, index) => (
           <div
             key={index}
-            className="ring-1 ring-slate-200 shadow-md ring-inset p-4 bg-slate-100 rounded-md hover:bg-gradient-to-r from-red-100 via-red-50 to-red-200"
+            className="ring-1 ring-gray-400 shadow-md ring-inset p-4 hover:ring-red-300 bg-gray-200 rounded-md hover:bg-gradient-to-r from-red-100 via-red-50 to-red-200"
           >
             <div className="flex gap-2 items-center mb-3">
               <svg
