@@ -44,7 +44,7 @@ const Login = ({ onLogin }) => {
 
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center mb-10 md:mb-16 text-slate-700">
+      <div className="flex min-h-full flex-1 flex-col justify-center mb-10 md:mb-16 text-slate-700 p-5 md:p-0">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h3 className="text-xl font-bold mb-4">Login</h3>
           <h4 className="font-medium">

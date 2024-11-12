@@ -6,19 +6,19 @@ import { pictures } from "./data";
 
 const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto w-full text-slate-700 relative p-10">
+    <div className="max-w-7xl mx-auto w-full text-slate-700 relative py-5 p-5 md:px-10">
       <div className="mb-5">
-        <h1 className="text-4xl font-bold leading-6 mb-5">
+        <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold leading-8 md:mb-5 mb-2">
           High Court of Tanzania
         </h1>
         <h2
-          className="leading-6 text-3xl text-red-500 font-semibold
+          className="leading-6 text-2xl lg:text-3xl text-red-500 font-semibold
         "
         >
           Commercial Division
         </h2>
       </div>
-      <div className="flex items-start justify-between gap-10 mb-8 md:mb-10">
+      <div className="flex flex-col lg:flex-row items-start justify-between gap-5 md:gap-10 mb-8 md:mb-10">
         <p className="lg:leading-7 leading-6 text-lg">
           The Commercial Court was officially inaugurated on 15th September,
           1999. The Government of Tanzania endorsed the recommendations in 1997.
@@ -29,7 +29,7 @@ const Home = () => {
         <img
           src="/assets/gravel.jpg"
           alt=""
-          className="w-1/2 h-auto rounded-xl"
+          className="lg:w-1/2 h-auto rounded-xl"
         />
       </div>
       <div className="mb-5 relative text-lg">
@@ -44,7 +44,7 @@ const Home = () => {
           <span className="font-semibold">Commercial Division</span> with their
           heart.
         </p>
-        <div className="grid grid-cols-3 gap-5 place-items-center w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center w-full">
           {pictures.map((picture) => (
             <div key={picture.id} className="w-full">
               <img

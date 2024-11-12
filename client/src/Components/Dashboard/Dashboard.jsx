@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <main className="w-full lg:w-[980px] mx-auto p-4 mb-10 md:mb-16">
+    <main className="w-full max-w-6xl mx-auto p-5 mb-10 md:mb-16">
       <h1 className="text-2xl font-bold mb-8 text-center">Dashboard</h1>
-      <div className="w-full grid grid-cols-2 gap-8 lg:w-[80%]  mx-auto">
+      <div className="w-full grid gap-5 md:gap-8 lg:w-3/4 mx-auto">
         <Link to="/post">
           <button className="text-white bg-sky-500 w-full rounded-md py-5 flex items-center justify-center gap-3">
             <svg

@@ -6,7 +6,9 @@ import { links } from "./data";
 const Link = () => {
   return (
     <div className="p-10 max-w-7xl w-full mx-auto mb-16 rounded-lg bg-gray-200">
-      <h1 className="text-2xl font-bold mb-5 text-center">Related Links</h1>
+      <h1 className="text-2xl font-semibold mb-5 text-center">
+        Related <span className="text-red-500 font-bold">Links</span>
+      </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 place-items-center gap-5 md:gap-10">
         {links.map((link) => (
           <a href={link.url} target="_blank">

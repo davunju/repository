@@ -3,7 +3,7 @@ import { contents } from "./data";
 
 const Judgment = () => {
   return (
-    <div className="max-w-7xl w-full mx-auto p-10 space-y-10">
+    <div className="max-w-7xl w-full mx-auto px-5 md:px-10 space-y-10">
       <h1 className="text-2xl font-semibold mb-7">
         Latest <span className="font-bold text-red-500">Judgments</span>
       </h1>

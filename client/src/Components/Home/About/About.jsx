@@ -25,7 +25,7 @@ function About() {
     },
   ];
   return (
-    <div className="max-w-7xl w-full mx-auto mb-16 md:mb-24 p-10">
+    <div className="max-w-7xl w-full mx-auto mb-16 md:mb-24 px-5 md:px-10">
       <div className="about-right">
         <h2 className="text-2xl font-bold mb-8 text-center">
           Judiciary of Tanzania

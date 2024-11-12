@@ -63,7 +63,7 @@ const NewPost = () => {
   };
 
   return (
-    <main className="w-full lg:w-[980px] mx-auto mb-10 md:mb-16 flex flex-col justify-center text-slate-700">
+    <main className="w-full max-w-7xl mx-auto mb-10 md:mb-16 flex flex-col justify-center px-3 md:p-0 text-slate-700">
       <div className="space-y-5 w-fulll lg:w-[60%] mx-auto mb-5">
         <h1 className="text-2xl font-bold">Create New Article</h1>
       </div>
@@ -141,6 +141,7 @@ const NewPost = () => {
             name="date"
             id="date"
             required
+            placeholder=""
             value={date}
             onChange={(e) => setDate(e.target.value)}
             className="text-sm block ring-1 ring-inset w-56 ring-slate-300 rounded-md p-2 outline-none focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
