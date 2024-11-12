@@ -32,7 +32,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
                 <h1 className="text-base md:text-3xl">
                   High Court of Tanzania
                 </h1>
-                <h2 className="text-sm md:text-lg lg:text-xl font-semibold">
+                <h2 className="text-sm md:text-lg lg:text-2xl font-semibold">
                   Commercial Division
                 </h2>
               </div>
