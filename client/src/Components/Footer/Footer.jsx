@@ -65,9 +65,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Email"
-                className="block mb-3 p-2 md:w-64 w-10/12 mx-auto md:mx-0 md:indent-6 outline-none text-slate-400"
+                className="block mb-3 p-2 rounded-md md:w-64 w-10/12 mx-auto md:mx-0 md:indent-6 outline-none text-slate-400"
               />
-              <button className="block bg-sky-500 md:w-40 w-10/12 mx-auto md:mx-0 p-2 text-xl text-slate-50 hover:bg-orange-400">
+              <button className="block bg-sky-500 rounded-md md:w-40 w-10/12 mx-auto md:mx-0 p-2 text-xl text-slate-50 hover:bg-orange-400">
                 Subscribe
               </button>
             </form>

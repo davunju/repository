@@ -10,6 +10,10 @@ const NewPost = () => {
   const [date, setDate] = useState("");
   const [quillContent, setQuillContent] = useState("");
   const [image, SetImage] = useState(null);
+  const year = new Date().getFullYear();
+  const month = new Date().getMonth();
+  const day = new Date().getDate();
+  const today = `${year}-${month}-${day}`;
 
   const modules = {
     toolbar: [
@@ -142,6 +146,7 @@ const NewPost = () => {
             id="date"
             required
             placeholder=""
+            max={today}
             value={date}
             onChange={(e) => setDate(e.target.value)}
             className="text-sm block ring-1 ring-inset w-56 ring-slate-300 rounded-md p-2 outline-none focus:ring-sky-500 focus:border-transparent transition duration-300 ease-in-out"
