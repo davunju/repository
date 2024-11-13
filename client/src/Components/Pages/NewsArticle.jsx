@@ -68,7 +68,7 @@ const NewsArticle = () => {
 
               <div
                 dangerouslySetInnerHTML={{ __html: article.content }}
-                className="mb-3 text-lg"
+                className="mb-3 text-lg w-full lg:max-w-4xl"
               />
               <div></div>
             </>

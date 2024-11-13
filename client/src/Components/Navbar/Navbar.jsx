@@ -60,16 +60,16 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
           </div>
         </nav>
         <ul
-          className={`bg-red-700 p-3 md:flex items-center justify-center md:gap-5 gap-1 ${
+          className={`bg-red-700 p-3 md:flex items-center justify-center md:text-center lg:gap-5 md:gap-2 gap-1 ${
             menu
-              ? "bg-red-700 p-3 md:flex items-center justify-center md:gap-5 gap-1"
+              ? "bg-red-700 p-3 md:flex items-center justify-center lg:gap-5 gap-1"
               : "hidden"
           }`}
         >
           <Link to="/">
             <li
               onClick={closeMenu}
-              className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+              className="p-2 text-base cursor-pointer md:text-sm lg:text-base text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
             >
               Home
             </li>
@@ -78,7 +78,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
           <Link to="about">
             <li
               onClick={closeMenu}
-              className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+              className="p-2 text-base cursor-pointer md:text-sm lg:text-base text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
             >
               About Us
             </li>
@@ -87,7 +87,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
           <Link to="/fees&rules">
             <li
               onClick={closeMenu}
-              className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+              className="p-2 text-base cursor-pointer md:text-sm lg:text-base text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
             >
               Court Fees & Rules
             </li>
@@ -96,7 +96,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
           <Link to="/news">
             <li
               onClick={closeMenu}
-              className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+              className="p-2 text-base cursor-pointer md:text-sm lg:text-base text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
             >
               News
             </li>
@@ -105,7 +105,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
           <a href="https://tanzlii.org/judgments/TZHCComD/" target="_blank">
             <li
               onClick={closeMenu}
-              className="p-2 text-base cursor-pointer text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+              className="p-2 text-base cursor-pointer md:text-sm lg:text-base text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
             >
               Judgments & Ruling
             </li>
@@ -120,14 +120,14 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
                 <Link to="/dashboard">
                   <button
                     onClick={closeMenu}
-                    className="p-2 text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+                    className="p-2 text-slate-200 md:text-sm lg:text-base hover:text-orange-200 hover:underline hover:underline-offset-4"
                   >
                     Dashboard
                   </button>
                 </Link>
                 <button
                   onClick={handleLogoutClick}
-                  className="p-2 text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+                  className="p-2 text-slate-200 md:text-sm lg:text-base hover:text-orange-200 hover:underline hover:underline-offset-4"
                 >
                   Logout
                 </button>
@@ -136,7 +136,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
               <Link to="login">
                 <button
                   onClick={closeMenu}
-                  className="p-2 text-slate-200 hover:text-orange-200 hover:underline hover:underline-offset-4"
+                  className="p-2 text-slate-200 md:text-sm lg:text-base hover:text-orange-200 hover:underline hover:underline-offset-4"
                 >
                   Login
                 </button>
